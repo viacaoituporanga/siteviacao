@@ -1,0 +1,258 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ===========================
+   Variáveis (tema claro)
+   =========================== */
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* ===========================
+   Variáveis (tema escuro)
+   =========================== */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* ==============================================
+Mapeamento das variáveis para Tailwind v3
+============================================== */
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+}
+
+/* ===========================
+   Base sem @apply (sem erros)
+   =========================== */
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+/* =========================================
+   UTILITÁRIOS – Texto branco em heróis verdes
+   ========================================= */
+/* Força branco quando o container for o "herói" verde.
+   Cobre: bg-primary, bg-green-900 e o verde comum #042f1a. */
+@layer utilities {
+  .bg-primary .text-yellow-400,
+  .bg-primary .text-yellow-500,
+  .bg-primary .text-yellow-600,
+  .bg-green-900 .text-yellow-400,
+  .bg-green-900 .text-yellow-500,
+  .bg-green-900 .text-yellow-600,
+  .bg-\[\#042f1a\] .text-yellow-400,
+  .bg-\[\#042f1a\] .text-yellow-500,
+  .bg-\[\#042f1a\] .text-yellow-600 {
+    color: #fff !important;
+  }
+}
+
+/* =========================================
+   COMPONENTE AUXILIAR – use "hero-text-white"
+   ========================================= */
+@layer components {
+  /* Se quiser garantir sem depender das classes acima,
+     adicione 'hero-text-white' no <section> do herói. */
+  .hero-text-white,
+  .hero-text-white h1,
+  .hero-text-white h2,
+  .hero-text-white p,
+  .hero-text-white .subtitle {
+    color: #fff !important;
+  }
+}
+/* ===============================
+   Variáveis de cores (mantém a lógica do seu tema)
+================================ */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #f9f9f9;
+  --card-foreground: #000000;
+  --primary: #007bff;
+  --primary-foreground: #ffffff;
+  --secondary: #6c757d;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f3f5;
+  --muted-foreground: #6c757d;
+  --accent: #17a2b8;
+  --accent-foreground: #ffffff;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --border: #dee2e6;
+  --input: #f8f9fa;
+  --ring: #0d6efd;
+  --chart-1: #0d6efd;
+  --chart-2: #6610f2;
+}
+
+/* ===============================
+   Hero Text White (Banner)
+   Corrigindo texto branco
+================================ */
+.hero-text-white h1,
+.hero-text-white h2,
+.hero-text-white h3,
+.hero-text-white h4,
+.hero-text-white h5,
+.hero-text-white h6,
+.hero-text-white p,
+.hero-text-white span,
+.hero-text-white li,
+.hero-text-white a {
+  color: #ffffff !important; /* Força branco */
+}
+
+/* Botões dentro da seção hero */
+.hero-text-white .btn,
+.hero-text-white button {
+  background-color: var(--primary, #007bff);
+  color: var(--primary-foreground, #ffffff);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text-white .btn:hover,
+.hero-text-white button:hover {
+  background-color: #0056b3;
+}
+
+/* Links */
+.hero-text-white a {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Garantindo contraste para ícones
+================================ */
+.hero-text-white svg,
+.hero-text-white i {
+  fill: #ffffff;
+  color: #ffffff;
+}
