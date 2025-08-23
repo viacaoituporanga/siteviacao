@@ -36,11 +36,6 @@ export function AboutSection() {
             e filial em Rio do Sul/SC. Atendemos toda a região do Alto Vale do Itajaí, oferecendo viagens especiais e serviços de 
             fretamento para empresas, universidades, escolas e para o público em geral.
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-             
-            Nosso compromisso é oferecer conforto, segurança e qualidade em cada viagem, sempre com o objetivo de garantir a total
-            satisfação de nossos clientes.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
