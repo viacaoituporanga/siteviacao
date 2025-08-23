@@ -78,6 +78,10 @@ export default function EmpresaPage() {
                   Hoje, somos reconhecidos como referência em transporte rodoviário, com uma frota moderna e uma equipe
                   dedicada a proporcionar as melhores experiências de viagem.
                 </p>
+                <p>
+                 Mais do que transportar pessoas, queremos conectar histórias, facilitar rotinas e agregar valor ao seu 
+                 dia a dia ou da sua empresa.
+                </p>
               </div>
             </div>
             <div className="relative">
@@ -100,8 +104,8 @@ export default function EmpresaPage() {
             <Target className="w-16 h-16 text-primary mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Nossa Missão</h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-              Garantir viagens seguras, confortáveis e pontuais, conectando pessoas e destinos com excelência no
-              atendimento e compromisso com a satisfação total de nossos clientes.
+              Mais do que transportar pessoas, nossa missão é conectar histórias, facilitar rotinas e agregar valor
+              ao dia a dia de nossos clientes, oferecendo um transporte seguro, pontual, confortável e de qualidade.
             </p>
           </div>
         </div>
