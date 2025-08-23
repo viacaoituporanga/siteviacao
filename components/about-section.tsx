@@ -32,10 +32,13 @@ export function AboutSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Sobre a Viação Ituporanga</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A Viação Ituporanga é uma empresa de transporte rodoviário de passageiros, com sede em Ituporanga/SC e
-            garagem em Rio do Sul/SC. Atendemos toda a região do Alto Vale do Itajaí com viagens especiais, fretamentos
-            para empresas, universidades, escolas e o público em geral. Nosso objetivo é a total satisfação de nossos
-            clientes.
+            Somos a Viação Ituporanga, uma empresa especializada em transporte rodoviário de passageiros, com sede em Ituporanga/SC
+            e filial em Rio do Sul/SC. Atendemos toda a região do Alto Vale do Itajaí, oferecendo viagens especiais e serviços de 
+            fretamento para empresas, universidades, escolas e para o público em geral.
+          </p>
+          <p>
+            Nosso compromisso é oferecer conforto, segurança e qualidade em cada viagem, sempre com o objetivo de garantir a total
+            satisfação de nossos clientes.
           </p>
         </div>
 
